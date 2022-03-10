@@ -13,8 +13,8 @@
             return this;
         }
 
-        console.log(test1() == window);
-        console.log(window.test1() == window);
+        console.log(test1() == window); // true
+        console.log(window.test1() == window); // true
 
         function test2() {
             // 使用严格模式
@@ -22,8 +22,8 @@
             return this;
         }
 
-        console.log(test2() == undefined);
-        console.log(window.test2() == window);
+        console.log(test2() == undefined); // true
+        console.log(window.test2() == window); // true
     </script>
 </body>
 </html>

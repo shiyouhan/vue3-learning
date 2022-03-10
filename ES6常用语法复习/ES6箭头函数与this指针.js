@@ -19,7 +19,7 @@ let add = function (num1, num2) {
     return num1 + num2;
 }
 
-// 多行國数华的務头函数
+// 多行函数体的箭头函数
 let addA = (num1, num2) => {
     num1 += 5;
     num2 += 5;
