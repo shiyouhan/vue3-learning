@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h2 {
+            width: 800px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        .blue {
+            color: blue;
+        }
+        .red {
+            /* border: 1px solid red; */
+            color: red;
+        }
+        .bold {
+            font-weight: 800;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <h2 class="blue red">HTLML传统写法</h2> -->
+        <!-- 用一个布尔值决定某个样式是否生效 -->
+        <!-- <h2 class="green grey" :class="{blue:isBlue, red:isRed}"></h2> -->
+        <!-- 点击按钮，实现文字颜色的切换 -->
+        <!-- <h2 :class="h2Class" :title="message">点击按钮，实现文字颜色的切换</h2>
+        <button @click="changColor">文字颜色的切换</button> -->
+        <h2 :class=""></h2>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        let app = Vue.createApp({
+            data() {
+                return {
+                    isBlue: true,
+                    isRed: false,
+                    cssArray: ["bold", "blue"],
+                };
+            },
+            methods: {
+                changeColor() {
+                    this.isBlue = !this.isBlue;
+                    this.isRed = !this.isRed;
+                }
+            },
+            computed: {
+                h2Class() {
+                    return { blue: this.isBlue, red: this.isRed }
+                }
+            },
+        });
+        let vm = app.mount('#app');
+    </script>
+</body>
+
+<html>
